@@ -73,3 +73,6 @@ qualifies_for_benefits(P) :-
     findall(P, parent(P, _), L),
     length(L, N),
     N >= 3.
+
+
+%comment
