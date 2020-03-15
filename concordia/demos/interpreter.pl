@@ -13,5 +13,5 @@ transition(q2, b, q3).
 transition(q3, a, q1).
 transition(q3, b, q0).
 accept(Xs) :- start(Q), path(Q, Xs).
-path(Q, [X|Xs]) :- transition(Q, X, Q1), path(Q1, Xs).
+path(Q, [H|T]) :- transition(Q, H, Q1), path(Q1, T).
 path(Q, [ ]) :- final(Q).
